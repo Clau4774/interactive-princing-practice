@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+img {
+    width:100%;
+}
+
+body {
+    background-image: url(../images/bg-pattern.svg);
+    background-repeat:no-repeat;
+}
+
+.conteiner {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    min-width: 37.5rem;
+    text-align:center;
+}
+
+.header {
+    margin: 10rem;
+}
