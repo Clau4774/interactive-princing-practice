@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background: url(../images/pattern-circles.svg) no-repeat 50% 15%/40%;
+    background: url(../images/pattern-circles.svg) no-repeat 50% 11%/45%;
     min-width: 37.5rem;
     margin: auto;
 }
@@ -66,6 +66,7 @@ body {
     width: 90%;
     border-radius: 4%;
     padding: 3em 0;
+    font-size: .9rem;
 }
 
 /*Component header text*/
@@ -73,9 +74,10 @@ body {
 .form-component__h2-views {
     font-weight: var(--fw-800);
     letter-spacing: .1rem;
+    padding-top: .5rem;
 }
 
-/*Range slider*/
+/*Range slider general*/
 
 .form-component__input-slider {
     -webkit-appearance: none;
@@ -85,7 +87,7 @@ body {
     outline: none;
     
 }
-
+/*webkit*/
 .form-component__input-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     position: relative;
@@ -105,10 +107,40 @@ body {
     box-shadow: -.1rem -.1rem .2rem  #a5a5a7
 }
 
+.form-component__input-slider::-webkit-slider-thumb:hover {
+    background-color: #77ecdc;
+}
+
 .form-component__input-slider::-webkit-slider-thumb:active {
     background-color: #11d8c5;
 }
 
-.form-component__input-slider::-webkit-slider-thumb:hover {
+/*Firefox*/
+
+.form-component__input-slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    position: relative;
+    width: 4.2rem;
+    height: 4.2rem;
+    background: #11d8c5 url(../images/icon-slider.svg) no-repeat center center;
+    border-radius: 50%;
+    cursor: pointer;
+    top: -1.5rem;
+    box-shadow: 0 1rem 1rem .5rem  #8bfdf3;
+    border: none;
+}
+
+.form-component__input-slider::-moz-range-track {
+    height: 1rem;
+    border-radius: 5rem;
+    background-color: #eaeefb;
+    box-shadow: -.1rem -.1rem .2rem  #a5a5a7
+}
+
+.form-component__input-slider::-moz-range-thumb:hover {
     background-color: #77ecdc;
+}
+
+.form-component__input-slider::-moz-range-thumb:active {
+    background-color: #11d8c5;
 }
