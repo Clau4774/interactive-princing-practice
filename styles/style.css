@@ -83,11 +83,11 @@ body {
     -webkit-appearance: none;
     width: 80%;
     background: transparent;
-    margin: 4em 0;
+    margin: 3em 0;
     outline: none;
     
 }
-/*webkit*/
+/*Webkit Slider*/
 .form-component__input-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     position: relative;
@@ -115,7 +115,7 @@ body {
     background-color: #11d8c5;
 }
 
-/*Firefox*/
+/*Firefox Slider*/
 
 .form-component__input-slider::-moz-range-thumb {
     -webkit-appearance: none;
@@ -143,4 +143,41 @@ body {
 
 .form-component__input-slider::-moz-range-thumb:active {
     background-color: #11d8c5;
+}
+
+/*Form mid section*/
+
+.form-component__h3 {
+    font-size: 2.4rem;
+    font-weight: var(--fw-600);
+}
+
+.form-component__span {
+    font-weight: var(--fw-800);
+    font-size: 3.6rem;
+    color: var(--text-back-cta-color);
+}
+
+.form-component__billing-conteiner {
+    display: flex;
+    margin: 3rem 0;
+    justify-content: space-evenly ;
+    font-size: 1.4rem;
+    font-weight: var(--fw-600);
+}
+
+.form-component__discount {
+    color: #e88c73;
+    background-color: #ffede9;
+    padding: .2em .7em;
+    border-radius: 25% 25% 25% 25%;
+    font-size: 1.2rem;
+    margin-left: .5rem;
+    font-weight: var(--fw-800)
+}
+
+/*Billing checkbox*/
+
+.form-component__checkbox {
+    
 }
