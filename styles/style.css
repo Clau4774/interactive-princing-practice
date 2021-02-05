@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
 
-*{
+* {
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -8,12 +8,14 @@
 
 }
 
-:root{
-    --text-color: hsl(225, 20%, 60%);
-    
+:root {
+    --text-color: #858fad;
+    --text-back-cta-color: #293356;
+    --fw-600: 600;
+    --fw-800: 800;
 }
 
-html{
+html {
     font-size: 10px;
     color: var(--text-color);
 }
@@ -28,20 +30,25 @@ body {
     background-color: #fafbff;
 }
 
+
+/*Outside component*/
 .conteiner {
     display:flex;
     flex-direction:column;
     justify-content: center;
-    min-width: 37.5rem;
     text-align:center;
-    background: url(../images/pattern-circles.svg) no-repeat 30%/50% ;
+    align-items:center;
+    background: url(../images/pattern-circles.svg) no-repeat 50% 15%/40% ;
+
+    min-width:37.5rem;
+    margin:auto;
 }
 
 .header {
-    margin: 10rem 0;
+    margin-top: 10em;
 }
 
-.header h1{
+.header h1 {
     font-size: 2.4rem;
     margin-bottom: 1.5rem;
     color:#293356
@@ -49,6 +56,18 @@ body {
 
 .header p {
     font-size:1.5rem;
-    padding: 0 10rem;
+    padding: 0 8rem;
     line-height: 3rem
+}
+
+/*Component*/
+
+.form-component {
+    background: #fff;
+    margin-top: 5em;
+    padding: 4em;
+}
+
+.form-component__h2{
+    font-weight: var(--fw-800);
 }
