@@ -194,6 +194,7 @@ body {
 
 .form-component__input-checkbox:checked{
     background: #7ae9e0;   
+    transition: .5s;
     
 }
 
@@ -249,9 +250,15 @@ body {
     .form-component__footer-large-screen  {
         display: flex;
         justify-content: space-evenly;
+        align-items: center
     }
 
     .form-component__footer-flex-container li {
         margin-left: 0;
+        margin-bottom: -.2em;
+    }
+
+    .form-component__button {
+        margin-bottom: 1em;
     }
 }
