@@ -77,6 +77,8 @@ body {
     font-weight: var(--fw-800);
     letter-spacing: .1rem;
     padding-top: .5rem;
+    font-size: 1.6rem;
+    margin-bottom: 2em;
 }
 
 /*Range slider general*/
@@ -85,7 +87,7 @@ body {
     -webkit-appearance: none;
     width: 80%;
     background: transparent;
-    margin: 3em 0;
+    margin: 3em 0 4em 0;
     outline: none;
     
 }
@@ -93,13 +95,13 @@ body {
 .form-component__input-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     position: relative;
-    width: 4.2rem;
-    height: 4.2rem;
+    width: 5.5rem;
+    height: 5.5rem;
     background: #11d8c5 url(../images/icon-slider.svg) no-repeat center center;
     border-radius: 50%;
     cursor: pointer;
-    top: -1.5rem;
-    box-shadow: 0 1rem 1rem .5rem  #8bfdf3;
+    top: -2.3rem;
+    box-shadow: 0 1.2rem 1.5rem 1rem  #8bfdf3;
 }
 
 .form-component__input-slider::-webkit-slider-runnable-track {
