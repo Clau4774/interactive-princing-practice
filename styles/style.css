@@ -28,6 +28,7 @@ body {
     background-image: url(../images/bg-pattern.svg);
     background-repeat: no-repeat;
     background-color: #fafbff;
+    background-size: 100% 50%;
 }
 
 
@@ -48,21 +49,21 @@ body {
 
 .header h1 {
     font-size: 2.4rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5em;
     color:#293356
 }
 
 .header p {
     font-size: 1.5rem;
     padding: 0 5.5em;
-    line-height: 3rem;
+    line-height: 3em;
 }
 
 /*Component*/
 
 .form-component {
     background: #fff;
-    margin: 8rem auto;
+    margin: 8em auto;
     width: 90%;
     border-radius: 4%;
     padding: 3em 0;
@@ -161,8 +162,8 @@ body {
 
 .form-component__billing-conteiner {
     display: flex;
-    margin: 3rem auto;
-    padding-bottom: 4rem;
+    margin: 3em auto;
+    padding-bottom: 4em;
     justify-content: space-evenly ;
     font-size: 1.4rem;
     font-weight: var(--fw-600);
@@ -224,5 +225,33 @@ body {
 
 .form-component__footer-flex-container li {
     margin: 1.5rem auto; 
-    padding-left:1rem;
+    padding-left:1em;
+}
+
+.form-component__button {
+    outline: none;
+    padding: 1em 3em; 
+    font-weight: var(--fw-800);
+    background-color: var(--text-back-cta-color);
+    color: #cfdbff;
+    border:none;
+    border-radius:2.5em;
+    margin-top: 3em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.form-component__button:hover {
+    color:#fff;
+}
+
+@media (min-width: 50rem) {
+    .form-component__footer-large-screen  {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .form-component__footer-flex-container li {
+        margin-left: 0;
+    }
 }
