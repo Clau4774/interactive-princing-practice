@@ -37,9 +37,9 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background: url(../images/pattern-circles.svg) no-repeat 50% 11%/45%;
+    background: url(../images/pattern-circles.svg) no-repeat 50% 10%;
     min-width: 37.5rem;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .header {
@@ -67,6 +67,7 @@ body {
     border-radius: 4%;
     padding: 3em 0;
     font-size: .9rem;
+    max-width: 54rem;
 }
 
 /*Component header text*/
@@ -160,7 +161,7 @@ body {
 
 .form-component__billing-conteiner {
     display: flex;
-    margin: 3rem 0;
+    margin: 3rem auto;
     justify-content: space-evenly ;
     font-size: 1.4rem;
     font-weight: var(--fw-600);
@@ -169,15 +170,42 @@ body {
 .form-component__discount {
     color: #e88c73;
     background-color: #ffede9;
-    padding: .2em .7em;
+    
     border-radius: 25% 25% 25% 25%;
     font-size: 1.2rem;
-    margin-left: .5rem;
+    
     font-weight: var(--fw-800)
 }
 
 /*Billing checkbox*/
 
-.form-component__checkbox {
+.form-component__input-checkbox{
+    width:5.5rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    appearance: none;
+    background: #d0d8ef;
+    outline: none;
+    position:relative;
+}
+
+.form-component__input-checkbox:checked{
+    background: #77ecdc;   
     
+}
+
+.form-component__input-checkbox:before {
+    width:2rem;
+    height:2rem;
+    background: #fff;
+    content:"";
+    position: absolute;
+    top: .2rem;   
+    left: .5rem; 
+    border-radius: 50%;
+    transition:.5s
+}
+
+.form-component__input-checkbox:checked:before{
+    left: 3rem;
 }
