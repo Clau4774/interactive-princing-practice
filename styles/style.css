@@ -217,15 +217,12 @@ body {
 .form-component__footer-flex-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    list-style-image: url(../images/icon-check.svg);
     font-size: 1.4rem;
+    
 }
 
-.form-component__footer-flex-container p {
+.form-component__footer-flex-container li {
     margin: 1.5rem auto; 
-}
-
-.tick {
-    background: url(../images/icon-check.svg) no-repeat;
-
+    padding-left:1rem;
 }
