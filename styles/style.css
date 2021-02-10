@@ -155,6 +155,7 @@ body {
 .form-component__h3 {
     font-size: 2.4rem;
     font-weight: var(--fw-600);
+    
 }
 
 .form-component__span {
@@ -165,12 +166,13 @@ body {
 
 .form-component__billing-conteiner {
     display: flex;
-    margin: 3em auto;
+    margin: auto;
     align-items: center;
     justify-content: space-evenly ;
     font-size: 1.4rem;
     font-weight: var(--fw-600);
     border-bottom: 1px solid #edeffb;
+    padding: 1.5em 0 2em 0;
 }
 
 .form-component--discount::after {
@@ -225,7 +227,7 @@ body {
     flex-direction: column;
     list-style-image: url(../images/icon-check.svg);
     font-size: 1.4rem;
-    
+    padding-top: 1.5em;
 }
 
 .form-component__footer-flex-container li {
