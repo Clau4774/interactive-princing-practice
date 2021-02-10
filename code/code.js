@@ -4,22 +4,32 @@ const price = document.querySelector('.form-component__span');
 const views = document.querySelector('#views');
 const btn = document.querySelector('.form-component__button');
 
+let state = false;
+
 const changeValues = (e) => {
     let arrViews = ['10K', '50K', '100K', '500K', '1M'];
-    let arrPrice = ['$8.00', '$12.00', '$16.00', '$24.00', '$36.00'];
+    let arrPrice = [8, 12, 16, 24, 36];
+    let discount = arrPrice.map(a => {
+       return (a-(a*.25));
+    });
+    
+    console.log(discount)
     const inputValue = e.target.value;
     
-    for (let x = 0; x < arrViews.length ; x++) {
-        if(inputValue == x) {
-            return  (price.innerText = arrPrice[x], views.innerText = arrViews[x]);
-        }
+    if (!state) {
+        return  price.innerText = `$${arrPrice[inputValue]}.00 `, views.innerText = arrViews[inputValue];
+    } else {
+        return  price.innerText = `$${discount[inputValue]}.00 `, views.innerText = arrViews[inputValue];
     }
-    
 }
 
 const discount = (e) => {
     const value = e.target.checked;
-    console.log(value)
+    state = !state;
+    console.log(slider.value)
+    
+    changeValues(e);
+
 }
 
 slider.addEventListener('input', changeValues, false);
