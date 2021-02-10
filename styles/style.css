@@ -68,7 +68,8 @@ body {
     border-radius: 4%;
     padding: 3em 0;
     font-size: .9rem;
-    max-width: 54rem;
+    max-width: 60rem;
+    position:relative;
 }
 
 /*Component header text*/
@@ -95,8 +96,8 @@ body {
 .form-component__input-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     position: relative;
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 4.2rem;
+    height: 4.2rem;
     background: #11d8c5 url(../images/icon-slider.svg) no-repeat center center;
     border-radius: 50%;
     cursor: pointer;
@@ -165,21 +166,22 @@ body {
 .form-component__billing-conteiner {
     display: flex;
     margin: 3em auto;
-    padding-bottom: 4em;
+    align-items: center;
     justify-content: space-evenly ;
     font-size: 1.4rem;
     font-weight: var(--fw-600);
     border-bottom: 1px solid #edeffb;
 }
 
-.form-component__discount {
+.form-component--discount::after {
+    content:"25%";
     color: #e88c73;
     background-color: #ffede9;
-    
-    border-radius: 25% 25% 25% 25%;
+    margin-left: .5em;
+    border-radius: 2em;
     font-size: 1.2rem;
-    
-    font-weight: var(--fw-800)
+    font-weight: var(--fw-800);
+    padding: .3em .7em;
 }
 
 /*Billing checkbox*/
@@ -191,7 +193,7 @@ body {
     appearance: none;
     background: #d0d8ef;
     outline: none;
-    position:relative;
+    position: relative;
 }
 
 .form-component__input-checkbox:checked{
@@ -227,8 +229,8 @@ body {
 }
 
 .form-component__footer-flex-container li {
-    margin: 1.5rem auto; 
-    padding-left:1em;
+    margin: .5rem auto; 
+    padding-left: 1em;
 }
 
 .form-component__button {
@@ -239,7 +241,7 @@ body {
     color: #cfdbff;
     border:none;
     border-radius:2.5em;
-    margin-top: 3em;
+    margin-top: 1.5em;
     cursor: pointer;
     transition: .3s;
 }
@@ -248,7 +250,34 @@ body {
     color:#fff;
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 470px) {
+
+    .form-component__h2-views-container {
+        position:absolute;
+        left: 2rem;
+        top: 6rem;
+
+    }
+
+    .form-component__h3-views-container {
+        position: absolute;
+        top: 5rem;
+        right: 2rem;
+    }
+
+    .form-component__input-slider {
+        margin-top: 10em;
+    }
+
+    .form-component__billing-conteiner{
+        justify-content:space-evenly ;
+        align-items: center;
+    }
+
+    .form-component--discount::after {
+        content:"25% discount";
+    }
+
     .form-component__footer-large-screen  {
         display: flex;
         justify-content: space-evenly;
