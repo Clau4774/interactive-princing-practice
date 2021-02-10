@@ -13,20 +13,15 @@ const changeValues = (e) => {
        return (a-(a*.25));
     });
     
-    console.log(discount)
     const inputValue = e.target.value;
     
-    if (!state) {
-        return  price.innerText = `$${arrPrice[inputValue]}.00 `, views.innerText = arrViews[inputValue];
-    } else {
-        return  price.innerText = `$${discount[inputValue]}.00 `, views.innerText = arrViews[inputValue];
-    }
-}
+    !state ? (price.innerText = `$${arrPrice[inputValue]}.00 `, views.innerText = arrViews[inputValue]) :  (price.innerText = `$${discount[inputValue]}.00 `, views.innerText = arrViews[inputValue]);
 
+}
 const discount = (e) => {
-    const value = e.target.checked;
+    
+    
     state = !state;
-    console.log(slider.value)
     
     changeValues(e);
 
