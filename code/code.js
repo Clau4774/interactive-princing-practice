@@ -13,7 +13,7 @@ const arrViews = ['10K', '50K', '100K', '500K', '1M'];
     });
 
 const getValue = () => {
-    
+
     let val = slider.value;
     changeValues(val);
     return val
@@ -43,12 +43,25 @@ const confirmService = (evt) => {
     evt.preventDefault();
     let val = changeValues(getValue());
     let descActive = '';
-    val[2] ? descActive = '25% of discount' : descActive = 'no discount';
-    let conf = confirm(`You has been selected the ${val[0]} pageviews whit ${descActive} for a price of $${val[1]}.00.
+    val[2] ? descActive = '25% off discount for the yearly billing' : descActive = 'no discount';
+    let conf = confirm(`You has been selected the ${val[0]} Pageviews whit ${descActive} for a price off $${val[1]}.00
     
-    Want to confirm?`)
-    const id = Math.round(Math.random()*10000);
-    console.log(val[0] + ' '+val[1] +' ' + val[2]+ ' '+ id);
+    Want to confirm?`);
+
+    if (conf) {
+
+        alert('Thanks you for trust in us!')
+        let confirmed = {
+            id : Math.round(Math.random()*10000),
+            package : val[0],
+            price : val[1],
+            yearly : val[2] 
+        };
+
+        return console.log(confirmed);
+    };
+    
+    return console.log('Transaction canceled');
 }
 
 slider.addEventListener('input', getValue, false);
