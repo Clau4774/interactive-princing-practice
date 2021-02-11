@@ -44,7 +44,7 @@ const confirmService = (evt) => {
     let val = changeValues(getValue());
     let descActive = '';
     val[2] ? descActive = '25% off discount for the yearly billing' : descActive = 'no discount';
-    let conf = confirm(`You has been selected the ${val[0]} Pageviews whit ${descActive} for a price off $${val[1]}.00
+    let conf = confirm(`You has been selected the ${val[0]} Pageviews whit ${descActive} for a price of $${val[1]}.00
     
     Want to confirm?`);
 
